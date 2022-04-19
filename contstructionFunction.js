@@ -5,8 +5,11 @@ function TopBoy(Name, Age, Class, Workpermit, Gender, language) {
   this.Workpermit = Workpermit;
   this.Gender = Gender;
   this.language = language;
+  this.cleaning = function () {
+    alert("Cleaning the room at the moment");
+  };
 }
 
-var TopBoy1 = new TopBoy("Adeleke", 12, "Graduate", "Yes", "Male", [
+var topBoy1 = new TopBoy("Adeleke", 12, "Graduate", "Yes", "Male", [
   "English, Arabic",
 ]);
