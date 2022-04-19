@@ -53,3 +53,6 @@ for (var n = 0; n < allDrums; n++) {
     }
   });
 }
+
+// begin
+var 
