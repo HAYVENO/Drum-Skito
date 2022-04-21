@@ -6,16 +6,18 @@ for (var n = 0; n < allDrums; n++) {
   document.querySelectorAll(".drum")[n].addEventListener("click", function () {
     var butttonInnerHTML = this.innerHTML;
     makeSound(butttonInnerHTML);
+    animatedPress(butttonInnerHTML);
   });
 }
 
+//Checks for Keyboard press ("keydown")
 document.addEventListener("keydown", function (event) {
   makeSound(event.key);
+  animatedPress(event.key);
 });
 
-//Checks for Keyboard press ("keydown")
-function makeSound(letter) {
-  switch (letter) {
+function makeSound(theKey) {
+  switch (theKey) {
     case "w":
       var tom1 = new Audio("sounds/tom-1.mp3");
       tom1.play();
@@ -61,4 +63,11 @@ function makeSound(letter) {
     default:
       console.log(butttonInnerHTML);
   }
+}
+
+function animatedPress(pressedkey) {
+  document.querySelector("." + pressedkey).classList.add("pressed");
+  setTimeout(() => {
+    document.querySelector("." + pressedkey).classList.remove("pressed");
+  }, 800);
 }
