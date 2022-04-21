@@ -69,5 +69,5 @@ function animatedPress(pressedkey) {
   document.querySelector("." + pressedkey).classList.add("pressed");
   setTimeout(() => {
     document.querySelector("." + pressedkey).classList.remove("pressed");
-  }, 800);
+  }, 700);
 }
